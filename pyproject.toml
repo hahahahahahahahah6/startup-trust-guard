@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "startup-trust-guard"
+version = "0.1.0"
+description = "Inspect agent startup instructions and configuration trust"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "hao li" }]
+dependencies = []
+
+[project.scripts]
+startup-trust-guard = "startup_trust_guard.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["startup_trust_guard*"]
